@@ -1,0 +1,462 @@
+.dms-section
+    padding: 40px 0 120px
+    +r(576)
+        padding: 0 0 80px
+
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-3.png)
+        background-repeat: no-repeat
+        background-size: auto
+
+    &__list
+        display: flex
+        justify-content: space-between
+        gap: 20px
+        +r(992)
+            flex-wrap: wrap
+            gap: 40px
+
+    &__cards
+        background: $w
+        border: 1.39631px solid $w
+        box-shadow: 41.8892px 39.311px 167.557px rgba(27, 49, 66, 0.13)
+        border-radius: 47.2869px
+        padding: 40px
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        +r(576)
+            padding: 20px 40px 40px
+
+        &-icon
+            img
+                +r(576)
+                    max-height: 120px
+
+        &-title
+            text-align: center
+            padding: 25px 0 10px
+            h5
+                font-size: $h5-fs
+                color: #333672
+                +nSemBold
+                +r(576)
+                    font-size: $h6-fs
+
+        &-subtitle
+            text-align: center
+            padding-bottom: 40px
+            +r(576)
+                padding-bottom: 40px
+            span
+                font-size: $h6-fs
+                color: #7B8399
+                position: relative
+                display: block
+                +r(576)
+                    font-size: $body-fs
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: -20px
+                    left: 50%
+                    transform: translate(-50%, 0)
+                    width: 65px
+                    height: 1px
+                    background-color: $red
+
+        &-text
+            text-align: center
+            span
+                font-size: $h6-fs
+                letter-spacing: 0.1px
+                color: #000000
+                +r(576)
+                    font-size: $body-fs
+
+.insurance-companies-section
+
+    &__title
+        h3
+            font-size: $h3-fs
+            text-align: center
+            color: #151517
+            +nBold
+            +r(992)
+                font-size: $h4-fs
+            +r(576)
+                font-size: $h5-fs
+
+    &__cards
+        padding: 60px 0
+        perspective: 1500px
+        position: relative
+        border-radius: 50px
+        z-index: 20
+        margin: 40px 0 110px
+        +r(576)
+            margin: 40px 0 0
+            padding: 40px 0
+
+    &__cards-bg
+        position: absolute
+        z-index: -1
+        width: calc( 100% + 20px )
+        top: 0
+        left: -55px
+        right: 0
+        bottom: 0
+        background: $w
+        border: 1px solid $w
+        background: rgba(255, 255, 255, 0.7)
+        border: 1px solid #FFFFFF
+        box-shadow: 45px 43px 183px rgba(27, 49, 66, 0.1)
+        border-radius: 50px
+        transform: rotateY(-10deg) translateX(-5px)
+        +r(1280)
+            width: calc( 100% + 50px )
+        +r(992)
+            left: -35px
+
+        &::before
+            content: ""
+            position: absolute
+            bottom: -20px
+            left: 50%
+            transform: translate(-50%, 0)
+            width: 90%
+            height: 150px
+            background: $w
+            opacity: 0.56
+            border: 1px solid $w
+            border-radius: 51px
+            z-index: -1
+            opacity: 0.2
+            box-shadow: 10px 30px 75px rgba(49, 89, 211, 0.12)
+            +r(1280)
+                height: 200px
+
+    .forSwiper
+        position: absolute
+        top: 45%
+        left: 0
+        right: 0
+        +r(576)
+            position: initial
+            display: flex
+            gap: 50px
+            padding: 70px 0 0
+            justify-content: center
+
+    &__swiper
+        overflow: visible
+        padding: 0 100px
+
+        &-body
+            display: flex
+            justify-content: center
+
+        &__img
+            width: 160px
+            height: 160px
+            background-color: $w
+            border-radius: 100%
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            +r(1280)
+                width: 140px
+                height: 140px
+
+            &::after
+                content: ""
+                width: 190px
+                height: 190px
+                background: $w
+                opacity: 0.5
+                box-shadow: 0px 76px 109px rgba(0, 0, 0, 0.08)
+                border-radius: 100%
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                z-index: -1
+                +r(1280)
+                    width: 160px
+                    height: 160px
+
+    .insurance-companies-section__swiper-slide.swiper-slide .insurance-companies-section__swiper-body
+        transition: .01s
+        opacity: 0
+
+    .insurance-companies-section__swiper-slide.swiper-slide.swiper-slide-visible .insurance-companies-section__swiper-body
+        opacity: 1
+
+.servicer-dms-section
+    padding-bottom: 100px
+    +r(576)
+        padding-bottom: 50px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 140px 20px
+        justify-items: center
+        padding: 70px 0 0
+        +r(1440)
+            grid-template-columns: repeat(2, 1fr)
+        +r(992)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 100px 20px
+        +r(576)
+            gap: 40px 20px
+
+    &__cards
+        padding: 110px 45px 40px
+        border-radius: 40px
+        width: 100%
+        +r(992)
+            padding: 100px 30px 30px
+        +r(576)
+            padding: 20px 30px
+
+        img
+            +r(992)
+                max-width: 180px
+            +r(576)
+                max-width: 120px
+
+    &__cards-icon
+        position: absolute
+        left: 0
+        top: -80px
+        +r(576)
+            position: initial
+
+    &__cards-title
+        h5
+            +nBold
+            font-size: $h5-fs
+            color: #333672
+            position: relative
+            text-transform: uppercase
+            padding-bottom: 15px
+            +r(1440)
+                font-size: $h6-fs
+            +r(576)
+                padding-bottom: 0
+
+    &__cards-subtitle
+        span
+            font-size: $h6-fs
+            color: #7B8399
+
+    &__cards-text
+        p
+            font-size: $h6-fs
+            letter-spacing: 0.1px
+            color: $b
+            position: relative
+            padding-top: 50px
+            +r(1440)
+                font-size: 18px
+
+            &::after
+                content: ""
+                position: absolute
+                top: 20px
+                left: 0%
+                width: 65px
+                height: 1px
+                background-color: $red
+
+.about-aids-section
+
+    &__card
+        background: $w
+        box-shadow: 0px 63px 70px rgba(63, 102, 240, 0.0985337)
+        border-radius: 25px
+        padding: 30px
+        display: flex
+        justify-content: space-between
+        +r(992)
+            flex-direction: column
+        +r(576)
+            padding: 20px
+
+    &__img
+        flex-basis: 47%
+        max-width: 47%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 25px
+
+    &__info_color-pink
+        border-top-right-radius: 25px
+        background-color: #FFEAEA
+        padding: 30px 35px
+        margin-bottom: 30px
+        +r(992)
+            margin-top: 30px
+            border-radius: 25px
+        +r(576)
+            padding: 20px 25px
+
+        p
+            font-size: $body-fs
+            letter-spacing: 0.1px
+            color: $b
+            +r(1280)
+                font-size: $caption-fs
+
+    &__info_color-red
+        border-bottom-right-radius: 25px
+        background: #D12023
+        padding: 40px
+        +r(992)
+            border-radius: 25px
+        +r(576)
+            padding: 20px 25px
+
+        h3
+            font-size: $h3-fs
+            color: $w
+            +nBold
+            +r(1280)
+                font-size: $h4-fs
+
+        p
+            font-size: $h6-fs
+            letter-spacing: 1px
+            color: $w
+            +nMed
+            +r(1280)
+                font-size: $body-fs
+
+    &__box
+        flex-basis: 50%
+        max-width: 50%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+.about-admission-section
+    position: relative
+    &::before
+        content: ""
+        width: 50%
+        height: 50%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-4.png)
+        background-repeat: no-repeat
+        background-size: contain
+    &__tab
+        background: $w
+        box-shadow: 10px 50px 60px rgba(0, 0, 0, 0.1)
+        border-radius: 15px
+        padding: 50px 40px 50px
+        margin: 130px 0 120px
+        position: relative
+        +r(992)
+            padding: 30px 40px 30px
+            margin: 80px 0
+        +r(576)
+            padding: 30px 20px 30px
+            margin: 40px 0
+
+        &__title
+            padding-top: 40px
+            h5
+                font-size: $h5-fs
+                color: #09080D
+                +nBold
+
+        &__list
+            position: absolute
+            top: -30px
+            left: 0
+            display: flex
+            justify-content: center
+            gap: 15px
+            width: 100%
+            z-index: 3
+            +r(992)
+                position: initial
+
+        &__btn
+            font-size: $body-fs
+            line-height: 175%
+            display: flex
+            justify-content: center
+            align-items: center
+            letter-spacing: 0.004em
+            color: #20232C
+            background: rgba(255, 255, 255, 0.93)
+            border: 1px solid #B3B3B3
+            border-radius: 65px
+            transition: .5s
+            padding: 20px
+            transition: .5s
+            min-width: 285px
+            +nSemBold
+            +r(576)
+                font-size: $caption-fs
+                padding: 12px 25px
+
+            &:hover
+                color: #EE5351
+                background: rgba(255, 255, 255, 0.93)
+                border: 1px solid #EE5351
+                box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+                border-radius: 65px
+
+            &.active
+                color: #EE5351
+                background: rgba(255, 255, 255, 0.93)
+                border: 1px solid #EE5351
+                box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+                border-radius: 65px
+
+        &__body
+            padding-top: 40px
+            display: flex
+            flex-direction: column
+            gap: 30px
+            +r(992)
+                padding: 40px 0 20px
+            +r(576)
+                padding: 20px 0
+
+            li
+                font-size: $h6-fs
+                line-height: 160%
+                color: #000000
+                display: flex
+                align-items: center
+                gap: 13px
+                +nMed
+                +r(576)
+                    font-size: $small-fs
+
+                &::before
+                    content: url("../img/icons/check.svg")
+                    height: 32px

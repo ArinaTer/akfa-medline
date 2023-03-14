@@ -1,0 +1,60 @@
+.base-page-section
+    position: relative
+
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-4.png)
+        background-repeat: no-repeat
+        background-size: auto
+
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 40px 0
+        +r(992)
+            padding: 100px 0 50px
+
+    &__title
+        position: relative
+        padding-bottom: 30px
+        +r(992)
+            padding-bottom: 20px
+        h3
+            font-size: $h3-fs
+            line-height: 78.4%
+            text-align: center
+            color: #030314
+            +nMed
+            +r(1440)
+                font-size: $h4-fs
+        &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, 0)
+            width: 65px
+            height: 3px
+            background-color: $red
+
+    &__text
+        padding-top: 30px
+        +r(992)
+            padding: 15px 15px 0
+        p
+            font-size: 18px
+            letter-spacing: 0.1px
+            line-height: 191%
+            +r(1280)
+                padding-top: 15px
+            +r(576)
+                font-size: $caption-fs
+                padding-top: 10px

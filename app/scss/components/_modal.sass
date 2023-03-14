@@ -1,0 +1,225 @@
+.popup__modal
+    &__close-btn
+        display: flex
+        justify-content: flex-end
+        padding: 30px 30px 0
+        +r(576)
+            padding: 15px 15px 0
+
+    &__body
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 0 60px 70px
+        +r(576)
+            padding: 0 30px 40px
+
+        &__title
+            padding-bottom: 15px
+            h4
+                font-size: $h4-fs
+                text-align: center
+                color: #0A1629
+                +nMed
+
+        &__img
+            padding-bottom: 30px
+            +r(576)
+                padding-bottom: 20px
+
+        &__text
+            padding-bottom: 35px
+            +r(576)
+                padding-bottom: 25px
+            p
+                font-size: $h5-fs
+                text-align: center
+                color: #0A1629
+
+            span
+                +nBold
+
+    &__forms
+        width: 100%
+
+    &__input
+        padding-bottom: 30px
+        +r(576)
+            padding-bottom: 20px
+
+    .main__btn-red
+        border-radius: 5px
+        transition: .5s
+        will-change: transform
+
+        &:hover
+            transform: scale(1.02)
+
+.certificate__modal
+    &__close-btn
+        display: flex
+        justify-content: flex-end
+        padding: 10px 10px 0
+
+    &__list
+        display: flex
+        justify-content: space-between
+
+    &__img
+        flex-basis: 30%
+        max-width: 30%
+        cursor: pointer
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.spa__modal
+    &__close-btn
+        position: absolute
+        top: 25px
+        right: 25px
+        z-index: 1
+        +r(992)
+            position: initial
+            top: initial
+            right: initial
+            display: flex
+            padding: 25px 25px 0
+            justify-content: flex-end
+            +r(576)
+                padding: 10px 10px 0
+
+    &__body
+        padding: 25px
+
+    &__list
+        padding-bottom: 80px
+        +r(992)
+            padding-bottom: 10px
+        +r(576)
+            padding-bottom: 10px
+
+    &__top
+        display: flex
+        gap: 20px
+        padding-bottom: 40px
+        +r(992)
+            flex-direction: column
+            padding-bottom: 30px
+        +r(576)
+            gap: 20px
+            padding-bottom: 20px
+
+        &__title
+            h3
+                +nBold
+                font-size: $h3-fs
+                color: #030314
+                position: relative
+                padding-bottom: 25px
+                +r(1440)
+                    font-size: $h4-fs
+                +r(1280)
+                    padding-bottom: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 65px
+                    height: 3px
+                    background-color: $red
+
+        &__text
+            p
+                font-size: 18px
+                letter-spacing: 0.1px
+                padding-top: 10px
+                margin-bottom: 0
+                line-height: 191%
+                +r(1280)
+                    padding-top: 15px
+                +r(576)
+                    font-size: $caption-fs
+                    padding-top: 10px
+
+                &:nth-child(1)
+                    color: #575757
+                &:nth-child(2)
+                    color: #2A2966
+                    +nMed
+
+    &__left
+        width: 100%
+        flex-basis: 35%
+        max-width: 35%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__right
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        flex-basis: 62%
+        max-width: 62%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__bottom
+        .about-section__left
+            order: 2
+            +r(576)
+                order: 1
+        .about-section__right
+            order: 1
+            +r(576)
+                order: 2
+
+        p
+            font-size: 18px
+            letter-spacing: 0.1px
+            padding-top: 10px
+            margin-bottom: 0
+            line-height: 191%
+            color: #575757
+            +r(1280)
+                padding-top: 15px
+            +r(576)
+                font-size: $caption-fs
+                padding-top: 10px
+
+            &:nth-child(2)
+                color: #E13033
+
+    &__img
+        position: relative
+        height: 100%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 10px
+
+    &__btn
+        margin: 45px 0 10px
+        padding: 15px 10px
+        background: #E81D1D
+        border-radius: 8px
+        width: 100%
+        cursor: pointer
+        font-size: $h5-fs
+        text-align: left
+        +r(992)
+            font-size: $h6-fs
+        +r(576)
+            font-size: $body-fs
+
+        a
+            color: $w

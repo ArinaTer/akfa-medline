@@ -1,0 +1,199 @@
+
+.contacts-section
+    position: relative
+
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-3.png)
+        background-repeat: no-repeat
+        background-size: auto
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 140px 20px
+        justify-items: center
+        padding: 70px 0 0
+        +r(1440)
+            grid-template-columns: repeat(2, 1fr)
+        +r(576)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 100px 20px
+
+    &__cards
+        padding: 110px 20px 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        border-radius: 40px
+        gap: 30px
+        width: 100%
+        +r(576)
+            padding: 80px 30px 20px
+
+        img
+            +r(576)
+                max-width: 120px
+
+    &__cards-icon
+        position: absolute
+        top: -60px
+
+    &__cards-title
+        h5
+            +nBold
+            font-size: $h5-fs
+            text-align: center
+            color: #333672
+            position: relative
+            +r(1440)
+                font-size: $h6-fs
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: -20px
+                left: 50%
+                transform: translate(-50%, 0)
+                width: 65px
+                height: 1px
+                background-color: $red
+
+    &__cards-text
+        p
+            font-size: $h6-fs
+            text-align: center
+            color: #7B8399
+            +r(1440)
+                font-size: 18px
+
+    &__maps
+        background: $w
+        border: 1px solid rgba(112, 112, 112, 0.27)
+        box-shadow: 0px 15px 45px rgba(120, 134, 162, 0.14902)
+        border-radius: 15px
+        padding: 60px
+        margin: 100px 0
+        +r(576)
+            padding: 30px
+
+        &__title
+            h3
+                +nBold
+                font-size: $h3-fs
+                text-transform: capitalize
+                color: $b
+                +r(576)
+                    text-align: center
+
+        &__top
+            display: flex
+            justify-content: space-between
+            +r(768)
+                flex-direction: column
+                gap: 30px
+
+        &__left
+            flex-basis: 40%
+            max-width: 40%
+            +r(768)
+                flex-basis: 100%
+                max-width: 100%
+
+        &__list
+            padding: 40px 0 60px
+            +r(576)
+                padding: 30px 0
+
+        &__col
+            display: flex
+            align-items: center
+            gap: 20px
+            padding-bottom: 30px
+
+        &__text
+            p
+                font-size: $h6-fs
+                color: #111029
+                margin-bottom: 0
+
+        &__info
+            span
+                font-size: $h6-fs
+                color: #6B6B6B
+                padding-bottom: 10px
+                display: block
+
+        &__right
+            flex-basis: 55%
+            max-width: 55%
+            +r(768)
+                flex-basis: 100%
+                max-width: 100%
+
+        &__form-input
+            position: relative
+
+        &__form-textarea
+            position: relative
+
+        .form-control
+            padding: 20px 35px
+            background: rgba(244, 244, 244, 0.801191)
+            border-radius: 11px
+            border: 2px solid transparent
+            resize: none
+            margin-bottom: 25px
+
+            &:focus
+                border: 2px solid #D40023
+                box-shadow: 0px 8px 24px rgba(204, 204, 204, 0.5)
+                border-radius: 11px
+
+        label
+            position: absolute
+            top: 20px
+            right: 20px
+
+        .form-control:focus ~ label
+            svg
+                path
+                    fill: #D40023
+
+        &__form__btn
+            background: #D40023
+            border-radius: 11px
+            +nMed
+            font-size: 18px
+            color: $w
+            display: flex
+            gap: 20px
+            align-items: center
+            justify-content: center
+            max-width: 200px
+            padding: 20px
+            margin-top: 25px
+            will-change: transform
+            transition: .5s
+
+            &:hover
+                box-shadow: 0px 20px 30px rgba(245, 76, 76, 0.41)
+                transform: scale(.9)
+
+        &__bottom
+            padding-top: 55px
+
+        iframe
+            border-radius: 15px
+
+.map-widget-layout-view__top-controls, .zoom-control__group, .map-geolocation-control
+    display: none !important

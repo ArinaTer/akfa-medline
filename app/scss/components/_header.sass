@@ -1,0 +1,344 @@
+.main-header
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 0 30px
+        +r(1440)
+            padding: 15px 0 30px
+        +r(992)
+            padding: 10px 0 20px
+        +r(576)
+            flex-direction: column
+
+    &__bottom
+        position: relative
+        z-index: 2
+
+        .main-header__menu a:hover, .main-header__menu span:hover
+            color: $blue-1
+            background-color: transparent
+
+        .dropdown-item:hover, .dropdown-item:focus
+            color: $blue-1
+            background-color: transparent
+
+        .dropdown-menu
+            top: 35% !important
+            left: -1% !important
+            background-color: rgba(255, 255, 255, 0.7)
+            border: 1px solid #FFFFFF
+            box-shadow: 45px 24px 183px rgba(27, 49, 66, 0.12)
+            backdrop-filter: blur(12.5px)
+            border-radius: 11px
+            +r(992)
+                // left: 50% !important
+                // transform: translate(-50%, -80%) !important
+                position: relative !important
+                transform: initial !important
+                text-align: center
+
+        .main-header__menu__item-dropdown
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+        .main-header__menu__item-link
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                right: -13px
+                top: 8px
+                border: solid #003255
+                border-width: 0 2px 2px 0
+                display: inline-block
+                padding: 3px
+                color: #003255
+                transform: rotate(45deg)
+                transition: 0.2s
+                +r(992)
+                    top: 10px
+
+        .main-header__menu__item-link.show
+            position: relative
+            &::after
+                content: ""
+                transform: rotate(226deg)
+                top: 10px
+                +r(992)
+                    top: 14px
+
+        .dropdown-item
+            &:hover
+                &::before
+                    display: none
+
+    &__action
+        display: flex
+        justify-content: space-between
+        gap: 10px
+
+    &__btn-item
+        +r(992)
+            display: none
+
+    &__dropdown
+
+        .choices
+            overflow: visible
+            margin-bottom: initial
+            font-size: initial
+
+        .choices__inner
+            font-size: $body-fs
+            display: flex
+            justify-content: center
+            gap: 15px
+            align-items: center
+            font-weight: 600
+            color: $w
+            background-color: $blue-1
+            padding: 10px !important
+            padding-bottom: 0
+            min-width: 275px
+            border-radius: 5px
+            +r(576)
+                min-width: auto
+                padding: 10px 30px 10px 10px !important
+
+        .choices__item
+            position: relative
+            +r(576)
+                font-size: $small-fs
+
+            &::before
+                content: url("../img/icons/phone.png")
+                height: 20px
+
+        .choices__list--single
+            padding: 0 20px 0 4px
+
+        .choices__input.choices__input--cloned
+            display: none
+
+        .choices__list--single .choices__item
+            display: flex
+            align-items: center
+            gap: 15px
+            +r(576)
+                gap: 10px
+
+        .choices.is-open
+            &[data-type*=select-one]::after
+                content: ""
+                transform: rotate(226deg)
+                margin-top: -5.5px
+
+        .choices[data-type*=select-one]::before
+            content: ""
+            position: absolute
+            top: 10px
+            right: 15.5px
+            background-color: $blue-3
+            border-radius: 5px
+            width: 25px
+            height: 25px
+
+        .choices[data-type*=select-one]::after
+            content: ""
+            transition: .2s
+            border: solid $w
+            border-width: 0 3px 3px 0
+            display: inline-block
+            padding: 3px
+            transform: rotate(45deg)
+            margin-top: -8.5px
+            right: 23.5px
+
+        .choices__list.choices__list--dropdown.is-active
+            font-size: $body-fs
+            font-weight: 600
+            color: $w
+            background-color: $blue-1
+            padding: 5px 10px
+            border-radius: 5px
+            z-index: 6
+            margin-top: 5px
+
+        .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+            display: flex
+            gap: 10px
+            align-items: center
+            padding: 20px 7px
+            font-size: $body-fs
+            border-bottom: 1px dashed #266794
+            +r(576)
+                padding: 15px 5px
+                font-size: $small-fs
+
+            &:nth-child(3)
+                border-bottom: none
+
+        .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted
+            background-color: transparent
+
+        .choices__list--dropdown .choices__item--selectable::after, .choices__list[aria-expanded] .choices__item--selectable::after
+            content: ""
+
+    &__language
+        .dropdown-menu
+            min-width: 80px
+
+        .dropdown-item
+            color: $blue-1
+            font-size: $body-fs
+            line-height: 175%
+            text-transform: uppercase
+            +nSemBold
+            display: flex
+            align-items: center
+            gap: 15px
+            +r(1280)
+                font-size: $caption-fs
+
+    &__menu
+        background: rgba(255, 255, 255, 0.7)
+        border: 1.52734px solid #FFFFFF
+        box-shadow: 45.8202px 24px 183.281px rgba(27, 49, 66, 0.12)
+        backdrop-filter: blur(12.5px)
+        border-radius: 11px
+        display: flex
+        justify-content: space-evenly
+        padding: 20px 10px
+        margin: 0
+        +r(1280)
+            padding: 10px 0
+
+        +r(992)
+            display: none
+
+        li
+            font-size: 19px
+            line-height: 175%
+            text-decoration: none
+            color: #222833
+            z-index: 0
+            &::after
+                content: "/"
+                padding-left: 25px
+                opacity: 0.5
+                +r(1280)
+                    padding-left: 18px
+        a,
+        span
+            color: #222833
+            transition: .5s
+            position: relative
+            cursor: pointer
+            &:hover
+                color: $blue-1
+                &::before
+                    content: ""
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    bottom: -2px
+                    left: 0
+                    display: block
+                    border-bottom: 1px solid $blue-1
+                    animation: drawBorder .4s cubic-bezier(0.22, 0.61, 0.36, 1)
+                    transform-origin: left
+
+        li:last-child::after
+            display: none
+
+.main-header__burger
+    display: none
+    background: rgb(255 255 255 / 89%)
+    border: 1.52734px solid #FFFFFF
+    box-shadow: 45.8202px 24px 183.281px rgba(27, 49, 66, 0.12)
+    backdrop-filter: blur(12.5px)
+    border-radius: 11px
+    min-height: 50px
+    width: 90%
+    position: absolute
+    top: 100px
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: 2
+    +r(992)
+        display: block
+        top: 0
+
+    .main-header__burger-menu-icon
+        position: relative
+        cursor: pointer
+        padding: 0 20px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        min-height: 50px
+        transition: 1s
+
+        & .nav-icon
+            background: $blue-1
+            display: block
+            height: 2px
+            width: 30px
+            position: relative
+            transition: background .2S ease-out
+
+        & .nav-icon:before
+            background: $blue-1
+            content: ""
+            display: block
+            height: 100%
+            width: 100%
+            position: absolute
+            transition: all .2s ease-out
+            top: 10px
+
+        & .nav-icon:after
+            background: $blue-1
+            content: ""
+            display: block
+            height: 100%
+            width: 100%
+            position: absolute
+            transition: all .2s ease-out
+            top: -10px
+
+    .main-header__menu__item
+        a
+            font-size: 19px
+            line-height: 175%
+            text-decoration: none
+            color: #222833
+.main-header__burger-menu
+    display: none
+    transition: 1s
+
+.main-header__burger-menu-btn
+    display: none
+
+.main-header__burger-menu-btn:checked~.main-header__burger-menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-height: 100%
+    gap: 15px
+    padding: 0 0 30px
+
+.main-header__burger-menu-btn:checked~.main-header__burger-menu-icon .nav-icon
+    background-color: transparent
+
+.main-header__burger-menu-btn:checked~.main-header__burger-menu-icon .nav-icon:before
+    transform: rotate(-45deg)
+    top: 0
+
+.main-header__burger-menu-btn:checked~.main-header__burger-menu-icon .nav-icon:after
+    transform: rotate(45deg)
+    top: 0

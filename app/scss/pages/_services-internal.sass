@@ -1,0 +1,131 @@
+.app-services-internal
+    .about-section
+        position: relative
+        &::before
+            content: ""
+            width: 50%
+            height: 50%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            background-image: url(../img/decoration-4.png)
+            background-repeat: no-repeat
+            background-size: contain
+        &__tab
+            background: $w
+            box-shadow: 10px 50px 60px rgba(0, 0, 0, 0.1)
+            border-radius: 15px
+            padding: 50px 40px 50px
+            margin: 120px 0 160px
+            position: relative
+            +r(992)
+                padding: 50px 40px 30px
+                margin: 80px 0
+            +r(576)
+                padding: 50px 20px 30px
+
+            &__list
+                position: absolute
+                top: -30px
+                left: 0
+                display: flex
+                justify-content: center
+                gap: 15px
+                width: 100%
+                z-index: 3
+
+            &__btn
+                font-size: $body-fs
+                line-height: 175%
+                display: flex
+                justify-content: center
+                align-items: center
+                letter-spacing: 0.004em
+                color: #20232C
+                background: rgba(255, 255, 255, 0.93)
+                border: 1px solid #B3B3B3
+                border-radius: 65px
+                transition: .5s
+                padding: 20px
+                transition: .5s
+                min-width: 285px
+                +nSemBold
+                +r(576)
+                    font-size: $caption-fs
+                    padding: 12px 25px
+
+                &:hover
+                    color: #EE5351
+                    background: rgba(255, 255, 255, 0.93)
+                    border: 1px solid #EE5351
+                    box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+                    border-radius: 65px
+
+                &.active
+                    color: #EE5351
+                    background: rgba(255, 255, 255, 0.93)
+                    border: 1px solid #EE5351
+                    box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+                    border-radius: 65px
+
+            &__body
+                padding-top: 60px
+                display: flex
+                flex-direction: column
+                gap: 30px
+                +r(576)
+                    padding: 80px 0 20px
+
+                li
+                    font-size: $h6-fs
+                    line-height: 160%
+                    color: #000000
+                    display: flex
+                    align-items: center
+                    gap: 13px
+                    +nMed
+                    +r(576)
+                        font-size: $caption-fs
+
+                    &::before
+                        content: url("../img/icons/check.svg")
+                        height: 32px
+
+    .statistics-section
+        position: relative
+        &::before
+            content: ""
+            width: 60%
+            height: 100%
+            position: absolute
+            top: 0
+            right: 0
+            z-index: -1
+            background-image: url(../img/decoration-5.png)
+            background-repeat: no-repeat
+            background-size: contain
+
+    .about-section__item
+        padding-bottom: 0
+
+    .about-section__item__text
+        p
+            padding-bottom: 30px
+            +r(576)
+                padding-bottom: 10px
+
+    .about-section__img
+        img
+            min-height: 500px
+            +r(992)
+                min-height: 100%
+
+    .main__decoration-line-bottom
+        overflow: hidden
+        position: absolute
+        bottom: 0%
+        left: 0%
+        z-index: -1
+        width: 50%
+        height: 50%

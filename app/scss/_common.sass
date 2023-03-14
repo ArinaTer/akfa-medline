@@ -1,0 +1,449 @@
+body
+	min-width: 320px
+	color: $b
+	position: relative
+	background-color: $w-fa
+	font-size: $body-fs
+	line-height: 175%
+	overflow-x: hidden
+	+nReg
+
+::selection
+	background-color: $blue-3
+	color: $w
+
+.gs-anim
+	will-change: transform
+
+.app
+	overflow: hidden
+
+a
+	text-decoration: none
+
+h1
+	line-height: 101%
+
+h2
+
+	line-height: 117%
+
+h3
+	line-height: 133%
+
+h4
+	line-height: 123%
+
+h5
+	line-height: 148%
+
+h6
+	line-height: 150%
+
+.main__btn-red
+	font-size: $body-fs
+	line-height: 175%
+	display: flex
+	justify-content: center
+	align-items: center
+	font-weight: 600
+	color: $w
+	background-color: $red
+	padding: 10px
+	min-width: 160px
+	height: 100%
+	+r(1280)
+		font-size: $caption-fs
+		min-width: 140px
+	+r(576)
+		min-width: auto
+
+	&:focus
+		color: $w
+		background-color: $red
+		box-shadow: 0px 20.3678px 50.9196px rgba(255, 66, 66, 0.22)
+
+	&:hover
+		color: $w
+		background-color: $red
+		box-shadow: 0px 20.3678px 50.9196px rgba(255, 66, 66, 0.22)
+
+	&:active
+		color: $w !important
+		background-color: $red !important
+		box-shadow: 0px 20.3678px 50.9196px rgba(255, 66, 66, 0.22)
+
+.main__btn-white
+	font-size: $body-fs
+	line-height: 175%
+	display: flex
+	justify-content: center
+	align-items: center
+	font-weight: 600
+	color: $blue-1
+	border: 1px solid $blue-1
+	padding: 10px
+	min-width: 225px
+	height: 100%
+	+r(1280)
+		font-size: $caption-fs
+		min-width: 200px
+	+r(576)
+		min-width: auto
+
+	&:focus
+		border: 1px solid $blue-1
+		color: $blue-1
+
+	&:hover
+		border: 1px solid $blue-1
+		color: $blue-1
+
+	&:active
+		color: $blue-1 !important
+
+.main__btn-lang
+	display: flex
+	justify-content: center
+	gap: 15px
+	align-items: center
+	+nSemBold
+	border: 1px solid $blue-1
+	background-color: $w
+	padding: 15px
+
+	&:focus
+		border: 1px solid $blue-1
+		color: $w
+		background-color: $w
+
+	&:hover
+		border: 1px solid $blue-1
+		color: $w
+		background-color: $w
+
+	&:active
+		background-color: $w !important
+		border-color: $blue-1 !important
+
+	&.dropdown-toggle::after
+		content: ''
+		border: solid $blue-1
+		border-width: 0 3px 3px 0
+		display: inline-block
+		padding: 3px
+		color: $blue-1
+		transform: rotate(45deg)
+		transition: .2s
+
+	&.dropdown-toggle.show
+		&::after
+			content: ""
+			transform: rotate(226deg)
+			margin-top: 4.5px
+
+.main-scale-hover
+	transition: .5s
+	will-change: transform
+	&:hover
+		transform: scale(1.02)
+	&:focus
+		transform: scale(1.02)
+
+.forSwiper
+	.box
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			box-shadow: 22.4695px 20.6719px 50.3316px rgba(27, 49, 66, 0.15)
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			background-color: $w
+			z-index: -1
+			+r(768)
+				width: 60px
+				height: 60px
+
+	.swiper-button-prev
+		left: 0
+		right: auto
+		+r(576)
+			position: relative
+			top: initial
+			left: initial
+			right: initial
+
+	.swiper-button-next
+		left: auto
+		right: 0
+		+r(576)
+			position: relative
+			top: initial
+			left: initial
+			right: initial
+
+	.box
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+		display: none
+
+	.swiper-button-next:after, .swiper-rtl .swiper-button-next:after
+		display: none
+
+.main-cards
+	background: $w
+	border: 1px solid $w
+	box-shadow: 10px 30px 75px rgba(49, 89, 211, 0.12)
+	position: relative
+
+	&::before
+		content: ""
+		position: absolute
+		bottom: -20px
+		left: 50%
+		transform: translate(-50%, 0)
+		width: 90%
+		height: 150px
+		background: $w
+		opacity: 0.56
+		border: 1px solid $w
+		border-radius: 51px
+		z-index: -1
+		opacity: 0.5
+		box-shadow: 10px 30px 75px rgba(49, 89, 211, 0.12)
+		+r(1280)
+			height: 200px
+
+.main-title
+	h3
+		+nExBold
+		font-size: $h3-fs
+		text-transform: uppercase
+		color: #3B3838
+		+r(1280)
+			font-size: $h4-fs
+		+r(576)
+			font-size: $h5-fs
+
+canvas
+	display: block
+	vertical-align: bottom
+
+.main-line-anim-1
+	#particles-js
+		position: absolute
+		width: 100%
+		height: 100%
+		opacity: .3
+		z-index: -1
+		top: 0
+		right: -50%
+		+r(992)
+			left: 0
+			right: initial
+
+#particles-js2
+	position: absolute
+	width: 100%
+	height: 20%
+	opacity: .3
+	z-index: -1
+
+#particles-js3
+	position: absolute
+	right: -50%
+	width: 100%
+	height: 20%
+	opacity: .3
+	z-index: -1
+	+r(992)
+		right: initial
+		left: 0
+
+#particles-js-4
+	position: absolute
+	top: 5%
+	width: 100%
+	height: 25%
+	right: -70%
+	opacity: .3
+	z-index: -1
+	+r(992)
+		left: 0
+		right: initial
+
+#particles-js-5
+	position: absolute
+	bottom: 30%
+	width: 100%
+	height: 25%
+	left: -70%
+	opacity: .3
+	z-index: -1
+	+r(992)
+		right: 0
+		left: initial
+
+.main__decoration
+	position: absolute
+	top: 5%
+	right: 0
+	z-index: -1
+	svg
+		will-change: transform
+		path
+			will-change: transform
+
+.main__video-play
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	border: 0
+	background-color: $w
+	width: 80px
+	height: 80px
+	+r(1280)
+		width: 60px
+		height: 60px
+
+	&:hover::after
+		opacity: 0.8
+		background: $blue-3
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: $w
+		border-radius: 50%
+		animation: pulse-border 3s ease-out infinite
+
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: $w
+		opacity: 0.2
+		border-radius: 50%
+		z-index: -1
+		transition: opacity 0.6s cubic-bezier(0.4, 0, 0, 1), background 0.6s cubic-bezier(0.4, 0, 0, 1)
+
+	&:hover
+		path
+			fill: $w
+
+.main-banner
+	margin: 30px 0 30px
+	position: relative
+	+r(992)
+		margin: 60px 0
+	+r(576)
+		margin: 70px 0 30px
+
+	&__img
+		position: relative
+		overflow: hidden
+		aspect-ratio: 4
+		clip-path: url(#clip)
+		+r(992)
+			aspect-ratio: 2
+			clip-path: url(#clip-mob)
+
+		img
+			object-fit: cover
+			width: 100%
+			height: auto
+			position: relative
+
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, 0.2)
+
+	&::after
+		content: ""
+		position: absolute
+		bottom: -28%
+		left: 50.5%
+		transform: translate(-50%, 0%)
+		width: 100%
+		height: 100%
+		background-image: url(../img/about-banner-bg.png)
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: auto
+		z-index: -1
+		border-radius: 50px
+		+r(1440)
+			bottom: -25%
+		+r(1280)
+			background-size: cover
+		+r(992)
+			display: none
+
+	&__headline
+		position: absolute
+		top: 40%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 1
+		width: auto
+
+	&__title
+		h3
+			font-size: $h3-fs
+			text-align: center
+			color: #F8FAFB
+			+nBold
+			+r(1440)
+				font-size: $h4-fs
+			+r(992)
+				font-size: $h5-fs
+			+r(576)
+				font-size: $h6-fs
+
+	&__subtitle
+		h5
+			font-size: $h5-fs
+			text-align: center
+			color: $w
+			+nBold
+			+r(1440)
+				font-size: $h6-fs
+			+r(576)
+				font-size: $body-fs
+
+.fancybox__container
+	z-index: 1060
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs
+	display: none
+
+.fancybox-zoomIn
+	animation: 0.25s ease both fancybox-zoomIn
+
+.fancybox-zoomOut
+	animation: 0.15s ease both fancybox-zoomOut

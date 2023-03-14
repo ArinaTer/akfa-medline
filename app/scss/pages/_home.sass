@@ -1,0 +1,1254 @@
+//banner-section
+
+.banner-section
+    position: relative
+    margin-top: -40px
+    +r(992)
+        margin-top: 20px
+
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 190px
+        background-image: url(../img/svg/banner-decoration.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        z-index: 1
+        +r(1280)
+            height: 100px
+        +r(768)
+            object-fit: contain
+            height: 90px
+            bottom: -3px
+        +r(576)
+            display: none
+
+    &__swiper
+
+        &__img-bg
+            position: relative
+            z-index: -1
+            img
+                min-height: 90vh
+                object-fit: cover
+                +r(576)
+                    min-height: 75vh
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
+        bottom: 12%
+        left: 50%
+        transform: translate(-50%, 0)
+        +r(576)
+            z-index: 1
+            bottom: 6%
+
+    .swiper-pagination-bullet
+        background: #69A1B9
+        width: 25px
+        border-radius: 30px
+        opacity: .5
+
+    .swiper-pagination-bullet-active
+        opacity: 1
+
+    &__info
+        position: absolute
+        top: 40%
+        padding: 40px
+        min-width: 20%
+        z-index: 1
+        transform: translate(0, -40%)
+        background: rgba(255, 255, 255, 0.42)
+        border: 2px solid rgba(255, 255, 255, 0.67)
+        border-radius: 21px
+
+        &__title
+            font-size: $h3-fs
+            +nBold
+            color: $blue-1
+            +r(1280)
+                font-size: $h4-fs
+            +r(576)
+                font-size: $h5-fs
+
+        &__text
+            +nSemBold
+            color: $blue-1
+            +r(576)
+                font-size: $caption-fs
+
+// first-section
+
+.first-section
+    position: relative
+    padding-bottom: 190px
+    +r(1280)
+        padding-bottom: 80px
+    +r(576)
+        padding: 40px 0
+    &__bg
+        position: absolute
+        width: 100%
+        top: 0
+        background-repeat: no-repeat
+        background-size: auto
+        height: 100%
+        z-index: -1
+
+    &__top
+        display: flex
+        gap: 20px
+        justify-content: center
+        +r(1280)
+            gap: 15px
+        +r(992)
+            flex-wrap: wrap
+
+    &__cards
+        background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%)
+        box-shadow: -60px 40px 65px rgba(44, 35, 99, 0.05)
+        border-radius: 30px
+        padding: 40px
+        +r(1440)
+            padding: 45px 30px
+        +r(1280)
+            padding: 30px
+        +r(992)
+            padding: 20px 30px
+        a
+            text-decoration: none
+        h5
+            padding: 20px 0
+            +nBold
+            font-size: $h5-fs
+            line-height: 139.69%
+            color: #12689E
+            +r(1440)
+                font-size: $h6-fs
+                padding: 15px 0
+            +r(1280)
+                font-size: 18px
+
+        p
+            font-size: $body-fs
+            color: #697886
+            +r(1280)
+                font-size: $body-fs
+
+        &-btn
+            background-color: $w-fa
+            width: 45px
+            height: 45px
+            display: flex
+            float: right
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+            box-shadow: 1px 10px 16px rgba(44, 35, 99, 0.05)
+            transition: .5s
+            will-change: transform
+
+            &:hover
+                transform: scale(1.02)
+                box-shadow: 1px 10px 16px rgba(44, 35, 99, 0.2)
+
+    &__bottom
+        margin: 90px 0 0
+        +r(576)
+            margin: 40px 0 0
+
+    &__card
+        display: flex
+        gap: 40px
+        justify-content: space-between
+        padding: 90px 40px
+        perspective: 1500px
+        position: relative
+        z-index: 20
+        +r(1440)
+            padding: 70px 30px
+        +r(992)
+            flex-direction: column
+        +r(768)
+            perspective: none
+            background: $w
+            border: 1px solid $w
+            box-shadow: 40px 40px 168px rgb(27 49 66 / 24%)
+            border-radius: 50px
+            padding: 50px
+        +r(576)
+            padding: 30px
+
+    &__card-bg
+        position: absolute
+        z-index: -1
+        width: calc( 100% + 20px )
+        top: 0
+        left: -55px
+        right: 0
+        bottom: 0
+        background: $w
+        border: 1px solid $w
+        box-shadow: 40px 40px 168px rgb(27 49 66 / 24%)
+        border-radius: 50px
+        transform: rotateY(-10deg) translateX(-5px)
+        +r(1280)
+            width: calc( 100% + 50px )
+        +r(992)
+            left: -35px
+        +r(768)
+            width: 0
+            position: relative
+
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: 80%
+            height: 100%
+            background-color: rgb(255 255 255 / 35%)
+            border-radius: 50px
+            transform: rotate(6deg)
+
+        &::before
+            content: ""
+            position: absolute
+            top: 30px
+            left: 50px
+            width: 80%
+            height: 100%
+            background-color: rgb(255 255 255 / 35%)
+            border-radius: 50px
+            transform: rotate(-4deg)
+
+    &__video
+        flex-basis: 45%
+        max-width: 45%
+        position: relative
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            border-radius: 20px
+
+    &__welcome
+        flex-basis: 60%
+        max-width: 60%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__welcome-item
+
+        h6
+            font-size: $h5-fs
+            letter-spacing: 0.004em
+            color: #096BA7
+            +r(1440)
+                font-size: $h6-fs
+            +r(1280)
+                font-size: 18px
+
+    &__welcome-title
+
+        h3
+            +nBold
+            font-size: $h3-fs
+            letter-spacing: -0.459434px
+            color: #161E32
+            padding: 10px 0 25px
+            +r(1440)
+                font-size: $h4-fs
+                padding: 20px 0 15px
+            +r(1280)
+                font-size: $h5-fs
+
+            span
+                color: $red
+
+    &__welcome-text
+        p
+            font-size: $h6-fs
+            letter-spacing: 0.1px
+            color: #0045A6
+            margin-bottom: 50px
+            +r(1440)
+                margin-bottom: 40px
+            +r(1280)
+                font-size: 18px
+                margin-bottom: 20px
+            +r(576)
+                font-size: $body-fs
+
+        p:nth-child(2)
+            margin-bottom: 0
+
+// statistics-section
+
+.statistics-section
+    padding-bottom: 90px
+    +r(1280)
+        padding-bottom: 80px
+    +r(576)
+        padding-bottom: 40px
+
+    &__title
+        h3
+            text-align: center
+            +nExBold
+            font-size: $h3-fs
+            text-transform: uppercase
+            color: #0F2E4E
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 60px
+        justify-items: center
+        padding: 45px 0 180px
+        +r(992)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 60px 50px
+            padding: 40px 0 100px
+        +r(576)
+            padding: 20px 0 50px
+            gap: 50px 20px
+
+    &__cards
+        padding: 40px 50px
+        display: flex
+        justify-content: flex-start
+        gap: 40px
+        align-items: center
+        flex-direction: column
+        border-radius: 35px
+        width: 100%
+        +r(576)
+            padding: 20px 40px
+
+        img
+            +r(576)
+                max-width: 80px
+
+    &__cards-number
+        position: relative
+        display: flex
+        align-items: baseline
+        justify-content: center
+        gap: 15px
+        .counter
+            +nBold
+            font-size: 45px
+            text-align: center
+            color: #1C252C
+            +r(1440)
+                font-size: 35px
+            +r(576)
+                font-size: $h4-fs
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: -20px
+                left: 50%
+                transform: translate(-50%, 0)
+                width: 65px
+                height: 1px
+                background-color: #39D0FF
+                +r(576)
+                    bottom: -15px
+
+    &__cards-text
+        p
+            +nMed
+            font-size: $h5-fs
+            text-align: center
+            color: #25516F
+            +r(1440)
+                font-size: $h6-fs
+            +r(576)
+                font-size: $body-fs
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+        margin-bottom: 60px
+        +r(1280)
+            align-items: center
+        +r(992)
+            gap: 30px
+            flex-direction: column
+        +r(576)
+            padding: 0 20px
+
+    &__info-left
+        flex-basis: 45%
+        max-width: 45%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__info-list
+        padding-top: 30px
+
+        p
+            font-size: $h6-fs
+            color: #122541
+            padding-bottom: 2rem
+            +r(1440)
+                font-size: 18px
+                padding-bottom: 15px
+
+    &__info-right
+        flex-basis: 50%
+        max-width: 50%
+        position: relative
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+        .box
+            position: absolute
+            width: 83%
+            height: 83%
+            bottom: -40px
+            right: 0
+            left: auto
+            background: #00A3F4
+            opacity: 0.2
+            border-radius: 15px
+
+    &__info-box
+        position: relative
+        overflow: hidden
+
+        img
+            position: relative
+            width: 90%
+            height: 100%
+            object-fit: cover
+            border-radius: 15px
+
+// speciality-section
+
+.speciality-section
+    background-image: url(../img/third-decoration.png)
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 170px
+    +r(1280)
+        padding-bottom: 80px
+    +r(576)
+        padding-bottom: 60px
+
+    &__title
+        text-align: center
+        padding-bottom: 85px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 140px 20px
+        justify-items: center
+        +r(1440)
+            grid-template-columns: repeat(2, 1fr)
+        +r(576)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 100px 20px
+
+    &__cards
+        padding: 40px 20px 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        border-radius: 5px
+        gap: 30px
+        min-height: 315px
+        +r(1440)
+            padding: 40px 30px 20px
+            min-height: 300px
+            max-width: 450px
+        +r(576)
+            min-height: 260px
+            max-width: 350px
+
+        img
+            +r(576)
+                max-width: 120px
+
+    &__cards-icon
+        position: absolute
+        top: -60px
+
+    &__cards-title
+        h5
+            +nBold
+            font-size: $h5-fs
+            text-align: center
+            color: #333672
+            position: relative
+            +r(1440)
+                font-size: $h6-fs
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: -20px
+                left: 50%
+                transform: translate(-50%, 0)
+                width: 65px
+                height: 1px
+                background-color: $red
+
+    &__cards-text
+        p
+            font-size: $h6-fs
+            text-align: center
+            color: #7B8399
+            +r(1440)
+                font-size: 18px
+
+// video-section
+
+.video-section
+    position: relative
+
+    &__bg
+        position: absolute
+        left: 50%
+        top: 0
+        width: 85%
+        transform: translate(-50%, 0)
+        z-index: -1
+        +r(1440)
+            width: 90%
+        +r(576)
+            width: 95%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__title
+        h3
+            +nBold
+            font-size: $h3-fs
+            text-align: center
+            padding-bottom: 30px
+            text-transform: uppercase
+            color: #FFFFFF
+            +r(1440)
+                font-size: $h4-fs
+
+    &__slide
+        padding: 50px 0 30px
+        +r(576)
+            padding: 40px 0 30px
+
+    &__swiper
+        overflow: visible
+
+        &__cards
+            background-color: $w
+            display: flex
+            justify-content: center
+            gap: 30px
+            align-items: center
+            flex-direction: column
+            border-radius: 35px
+            padding: 20px 20px 40px
+            +r(1440)
+
+        .video-section__swiper__slide.swiper-slide .video-section__swiper__cards
+            transition: .5s
+            opacity: 0
+
+        .video-section__swiper__slide.swiper-slide.swiper-slide-visible .video-section__swiper__cards
+            opacity: 1
+
+        &__video
+            position: relative
+            width: 100%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+
+        &__title
+            h5
+                +nBold
+                font-size: $h5-fs
+                text-align: center
+                color: #333672
+                position: relative
+                +r(1440)
+                    font-size: $h6-fs
+
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: -20px
+                    left: 50%
+                    transform: translate(-50%, 0)
+                    width: 65px
+                    height: 1px
+                    background-color: $red
+
+    &__button
+        display: flex
+        justify-content: center
+        padding: 50px 0 130px
+        +r(1440)
+            padding: 50px 0 100px
+        +r(1280)
+            padding: 30px 0 80px
+
+        .main__btn-red
+            min-width: 240px
+            box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+
+            &:hover
+                transform: scale(.9)
+                box-shadow: none
+
+    .forSwiper
+        position: absolute
+        top: 45%
+        left: 0
+        right: 0
+        +r(576)
+            position: initial
+            display: flex
+            gap: 50px
+            padding: 70px 0 0
+            justify-content: center
+
+// puls-section
+
+.puls-section
+    padding-bottom: 90px
+    +r(1280)
+        padding-bottom: 80px
+    +r(576)
+        padding-bottom: 40px
+    &__title
+        h3
+            padding-bottom: 40px
+            text-align: center
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 30px 40px
+        +r(992)
+            display: flex
+            flex-direction: column
+
+    &__cards
+        background: #FFFFFF
+        border: 1px solid #FFFFFF
+        box-shadow: 12px 35px 90px rgba(49, 89, 211, 0.12)
+        border-radius: 46px
+
+        &__title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 20px 50px
+            border-radius: 37px
+            box-shadow: 12px 35px 90px rgba(49, 89, 211, 0.12)
+
+            h5
+                +nBold
+                font-size: $h5-fs
+                margin-bottom: 0
+                +r(1280)
+                    font-size: $h6-fs
+
+        &__text
+            padding: 60px 50px
+
+            p
+                font-size: $h6-fs
+                color: rgba(62, 65, 98, 0.82)
+                +r(1280)
+                    font-size: 18px
+
+// forms-block-section
+
+.forms-block-section
+    position: relative
+    background-image: url(../img/sixth-bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 100%
+    margin-bottom: 200px
+    +r(1280)
+        margin-bottom: 80px
+    +r(576)
+        margin-bottom: 40px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 40px 0
+        +r(992)
+            flex-direction: column
+        +r(576)
+            padding: 30px 20px
+
+    &__left
+        flex-basis: 58%
+        max-width: 58%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__title
+        h3
+            text-transform: none
+
+    &__text
+        p
+            font-size: $h5-fs
+            letter-spacing: 1px
+            color: #707070
+            padding: 25px 0 40px
+            +r(1280)
+                font-size: $h6-fs
+            +r(576)
+                font-size: $body-fs
+
+    &__form-input
+        width: 100%
+        display: flex
+        gap: 15px
+        +r(992)
+            flex-direction: column
+
+        input
+            background: #FFFFFF
+            border: 1px solid #FFFFFF
+            box-shadow: 10px 30px 80px rgba(53, 67, 109, 0.12)
+            border-radius: 5px
+
+    &__form-btn
+        box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+        transition: .5s
+        margin-top: 20px
+        border-radius: 5px
+        +r(992)
+            margin: 40px auto
+
+        &:hover
+            transform: scale(.9)
+            box-shadow: none
+
+    &__right
+        flex-basis: 35%
+        max-width: 35%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+// personnel-section
+
+.personnel-section
+
+    &__title
+        h3
+            text-align: center
+            padding-bottom: 30px
+            +r(576)
+                padding: 0 10px 30px
+
+    &__swiper
+        overflow: visible
+
+        &__cards
+            background: #FFFFFF
+            box-shadow: 40px 65px 155px rgba(27, 49, 66, 0.1)
+            border-radius: 20px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            gap: 30px
+            padding: 20px 30px
+            position: relative
+            min-height: 660px
+            +r(1440)
+                min-height: 560px
+            +r(1280)
+                min-height: 460px
+
+        .personnel-section__swiper__slide.swiper-slide .personnel-section__swiper__cards
+            transition: .3s
+            transform: scale(.9)
+            opacity: .5
+
+        .personnel-section__swiper__slide.swiper-slide.swiper-slide-visible .personnel-section__swiper__cards
+            transform: scale(1)
+            opacity: 1
+
+        &__name
+            h6
+                font-size: $h6-fs
+                color: #1E323A
+                position: relative
+                +nBold
+                +r(1440)
+                    font-size: 18px
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: -20px
+                    left: 0
+                    width: 65px
+                    height: 1px
+                    background-color: $b
+            a
+                color: #1E323A
+
+        &__item
+            span
+                font-size: $h6-fs
+                color: #608595
+                +r(1440)
+                    font-size: 18px
+
+        &__img
+            position: relative
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                z-index: 1
+                width: 100%
+                height: 50%
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.31) 100%)
+                border-radius: 5px 5px 0px 0px
+                transform: matrix(1, 0, 0, -1, 0, 0)
+
+    .forSwiper
+        display: flex
+        width: 100%
+        justify-content: space-between
+        padding: 100px 0
+        transition: .5s
+        +r(576)
+            justify-content: center
+            gap: 50px
+            padding: 50px 0
+
+    .swiper-button-prev
+        position: relative
+
+    .swiper-button-next
+        position: relative
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
+        bottom: 12%
+        +r(576)
+            position: relative
+            padding: 40px 0 0
+
+    .swiper-pagination-bullet
+        background: #69A1B9
+        width: 25px
+        border-radius: 30px
+        opacity: .5
+
+    .swiper-pagination-bullet-active
+        opacity: 1
+
+// reviews-section
+
+.reviews-section
+    position: relative
+    background-image: url(../img/reviews-bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 100%
+    padding-top: 60px
+
+    &__title
+        h3
+            text-align: center
+            padding: 0 0 90px
+
+    &__swiper
+        overflow: visible
+
+        &__cards
+            background: $w
+            box-shadow: 53px 20px 45px rgba(49, 89, 211, 0.12)
+            border-radius: 20px
+            padding: 45px 35px 40px
+            position: relative
+            display: flex
+            gap: 10px
+            flex-direction: column
+            justify-content: space-between
+            +r(1440)
+                padding: 60px 25px 30px
+
+        &__decor
+            position: absolute
+            top: -70px
+            left: 0
+
+        &__line
+            opacity: .5
+            border-bottom: 1px dashed #000000
+
+        &__info
+            display: flex
+            align-items: center
+            gap: 20px
+
+        &__title
+
+            h6
+                +nBold
+                font-size: $h6-fs
+                color: #030314
+                +r(1440)
+                    font-size: 18px
+
+        &__subtitle
+
+            span
+
+                +nMed
+                font-size: $body-fs
+                color: #70798B
+                +r(992)
+                    font-size: $caption-fs
+
+        &__text
+
+            p
+                font-size: $body-fs
+                line-height: 23px
+                color: #74829F
+                +r(1440)
+                    font-size: $caption-fs
+
+    .reviews-section__swiper__slide.swiper-slide .reviews-section__swiper__cards
+        transition: .5s
+        opacity: 0
+
+    .reviews-section__swiper__slide.swiper-slide.swiper-slide-visible .reviews-section__swiper__cards
+        opacity: 1
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
+        bottom: 15%
+        +r(576)
+            position: relative
+            padding: 40px 0 0
+
+    .forSwiper
+        display: flex
+        width: 100%
+        justify-content: space-between
+        padding: 80px 0
+        transition: .5s
+        +r(576)
+            justify-content: center
+            gap: 50px
+            padding: 50px 0
+
+    .swiper-button-prev
+        position: relative
+
+    .swiper-button-next
+        position: relative
+
+    .swiper-pagination-bullet
+        background: #69A1B9
+        width: 25px
+        border-radius: 30px
+        opacity: .5
+
+    .swiper-pagination-bullet-active
+        opacity: 1
+
+// stock-section
+
+.stock-section
+    position: relative
+    padding-top: 50px
+
+    &__title
+        h3
+            text-align: center
+            padding: 0 0 30px
+
+    &__swiper
+        overflow: visible
+
+        &__img
+            img
+                border-radius: 25px
+
+        &__cards
+            flex-basis: 100%
+            max-width: 100%
+            box-shadow: 5px 20px 45px rgb(0 0 0 / 38%)
+            border-radius: 100px
+            transition: .5s
+            will-change: transform
+            min-height: 300px
+
+            &:hover
+                transform: scale(1.05)
+
+            &::after
+                content: ""
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: linear-gradient(180deg, rgba(8, 20, 32, 0.0001) 0%, #081420 100%)
+                opacity: 0.5
+                z-index: 0
+                border-radius: 25px
+
+            .stock-section__swiper__info
+                position: absolute
+                bottom: 30px
+                left: 40px
+                right: 40px
+                z-index: 1
+
+                .stock-section__swiper__title
+                    order: 1
+
+                h6
+                    +nBold
+                    font-size: $h6-fs
+                    line-height: 31px
+                    display: flex
+                    align-items: flex-end
+                    color: $w
+                    +r(1440)
+                        font-size: 18px
+                    +r(576)
+                        font-size: $body-fs
+
+                .stock-section__swiper__text
+                    order: 2
+
+                span
+                    +nMed
+                    font-size: $small-fs
+                    color: $w
+
+                    &:first-of-type
+                        padding-right: 5px
+                        border-right: 1px solid #E0E0E0
+
+
+        &__img
+            img
+                width: 100%
+                height: 400px
+                object-fit: cover
+
+        &__info
+            display: flex
+            flex-direction: column
+            padding-top: 20px
+
+        &__title
+            order: 2
+            h6
+                +nBold
+                font-size: $h6-fs
+                line-height: 31px
+                display: flex
+                align-items: flex-end
+                color: #70798B
+                +r(1440)
+                    font-size: 18px
+                +r(576)
+                    font-size: $small-fs
+                    line-height: 20px
+        &__text
+            order: 1
+            span
+                +nMed
+                font-size: $small-fs
+                color: #70798B
+
+                &:first-of-type
+                    padding-right: 10px
+                    border-right: 0.784802px solid #70798B
+
+                &:last-of-type
+                    padding-left: 5px
+
+    .stock-section__swiper__slide.swiper-slide .stock-section__swiper__cards
+        transition: 1s
+        opacity: 0
+
+    .stock-section__swiper__slide.swiper-slide.swiper-slide-visible .stock-section__swiper__cards
+        opacity: 1
+
+    &__pagination.swiper-pagination
+        bottom: -60px
+        left: initial
+        width: initial
+        +r(576)
+            bottom: -55px
+
+    .swiper-pagination-bullet
+        background: $b
+        width: 15px
+        height: 15px
+        opacity: 1
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+        background: $red
+
+// news-section
+.news-section
+    padding: 140px 0 180px
+    +r(576)
+        padding: 80px 0
+
+    &__title
+        h3
+            padding-bottom: 20px
+            text-align: center
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 40px 30px
+        +r(992)
+            display: flex
+            flex-direction: column
+
+    &__card
+        background: $w
+        border: 1px solid #D3D3D3
+        border-radius: 15px
+        padding: 0 45px
+        display: flex
+        gap: 50px
+        align-items: center
+        justify-content: space-between
+        +r(576)
+            gap: 10px
+            padding: 30px 20px
+            flex-direction: column
+
+        a
+            color: $b
+
+        &__date
+            span
+                font-size: $h6-fs
+                color: #FD346E
+                +r(1440)
+                    font-size: 18px
+
+        &__title
+            h6
+                +nBold
+                font-size: $h5-fs
+                color: #030314
+                +r(1440)
+                    font-size: $h6-fs
+                +r(1280)
+                    font-size: 18px
+                +r(576)
+                    text-align: center
+
+        &__btn
+            font-size: $body-fs
+            line-height: 175%
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 600
+            color: #010804
+            background: rgba(255, 255, 255, 0.6)
+            border: 1px solid #FF2929
+            box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+            border-radius: 11px
+            padding: 10px
+            min-width: 150px
+            transition: .5s
+
+            &:focus
+                color: $w
+                background-color: $red
+                box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+
+            &:hover
+                color: $w
+                background-color: $red
+                box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+
+            &:active
+                color: $w !important
+                background-color: $red !important
+                box-shadow: 0px 20px 50px rgba(255, 66, 66, 0.22)
+
+    &__left
+        display: flex
+        flex-direction: column
+        gap: 10px
+        padding: 50px 0
+        flex-basis: 50%
+        max-width: 50%
+        +r(576)
+            order: 2
+            padding: 20px 0 0
+            flex-basis: 100%
+            max-width: 100%
+            justify-content: center
+            align-items: center
+
+    &__right
+        height: 100%
+        flex-basis: 45%
+        max-width: 45%
+        padding: 30px 0
+        +r(576)
+            order: 1
+            padding: 0
+            flex-basis: 100%
+            max-width: 100%
+        img
+            height: 100%
+            object-fit: cover
+            border-radius: 15px

@@ -1,0 +1,154 @@
+.main-footer
+    width: 100%
+    height: 100%
+    position: relative
+    background: linear-gradient(0deg, #003255, #003255), linear-gradient(0deg, #458AFF, #458AFF), #0FA99E
+
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        background-image: url(../img/footer-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+        z-index: 0
+
+    &__container
+        padding: 60px 0
+        position: relative
+        z-index: 1
+
+    &__content
+        display: flex
+        justify-content: space-between
+        +r(992)
+            gap: 20px
+        +r(576)
+            flex-direction: column
+            padding: 0 20px
+            gap: 50px
+        
+
+    &__left
+        flex-basis: 35%
+        max-width: 35%
+        +r(992)
+            max-width: 100%
+            flex-basis: 100%
+        +r(576)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+    &__text
+        p
+            padding: 20px 0 30px
+            font-size: $body-fs
+            color: #F0F1F2
+            +r(576)
+                text-align: center
+
+    &__contact
+        display: flex
+        align-items: center
+        gap: 15px
+        padding-bottom: 30px
+        +r(576)
+            flex-direction: column
+
+        &__item
+            display: flex
+            flex-direction: column
+            +r(576)
+                align-items: center
+
+        &__top
+            font-size: $caption-fs
+            color: #F0F1F2
+
+        &__bottom
+            font-size: $h6-fs
+            color: #F0F1F2
+            +r(1440)
+                font-size: 18px
+            +r(576)
+                text-align: center
+
+    &__follow
+        display: flex
+        padding-top: 15px
+        gap: 20px
+
+    &__right
+        flex-basis: 60%
+        max-width: 60%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__form__title
+        h3
+            +nBold
+            font-size: $h3-fs
+            text-transform: capitalize
+            color: #F0F1F2
+            +r(576)
+                text-align: center
+
+        p
+            color: #F0F1F2
+            font-size: $h6-fs
+            +r(1440)
+                font-size: 18px
+            +r(576)
+                text-align: center
+
+    &__form
+        &-col
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 10px
+            +r(992)
+                grid-template-columns: repeat(1, 1fr)
+
+        &-textarea
+            padding: 10px 0 20px
+            textarea
+                resize: none
+
+        &__btn
+            background: #035CCB
+            border-radius: 9.00351px
+            +nSemBold
+            font-size: $h6-fs
+            padding: 18px
+            min-width: 145px
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            color: $w
+            +r(576)
+                padding: 18px 35px 
+                margin: 0 auto
+
+    &__copirayt
+        display: flex
+        justify-content: space-between
+        padding: 50px 0 0
+        flex-wrap: wrap
+        +r(576)
+            padding: 50px 20px 0
+            justify-content: center
+
+        span
+            font-size: $body-fs
+            color: $w
+            +r(1440)
+                font-size: $caption-fs
+            +r(576)
+                font-size: $small-fs

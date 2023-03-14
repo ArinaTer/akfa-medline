@@ -1,0 +1,191 @@
+.services-section
+    position: relative
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-3.png)
+        background-repeat: no-repeat
+        background-size: cover
+
+    &__title
+        h3
+            text-align: center
+    &__list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 60px 20px
+        justify-items: center
+        padding: 40px 0 100px
+        +r(1440)
+            grid-template-columns: repeat(2, 1fr)
+        +r(576)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 40px 20px
+            padding: 30px 0 60px
+
+    &__cards
+        padding: 10px 15px 35px
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-radius: 5px
+        gap: 10px
+        background: $w
+        border: 1px solid $w
+        box-shadow: 30px 30px 120px rgba#373d4121
+        border-radius: 25px
+        width: 100%
+        +r(1440)
+            padding: 20px 20px 40px
+            width: 80%
+
+        &-icon
+            width: 100%
+            height: auto
+
+        img
+            width: 100%
+            height: auto
+            object-fit: cover
+            border-radius: 15px
+
+    &__cards-title
+        height: 100%
+        h5
+            +nBold
+            font-size: $h5-fs
+            text-align: center
+            color: #333672
+            position: relative
+            height: 100%
+            +r(1440)
+                font-size: $h6-fs
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0px
+                left: 50%
+                transform: translate(-50%, 0)
+                width: 65px
+                height: 1px
+                background-color: $red
+
+.restaurant-section
+    padding: 100px 0 140px
+    +r(992)
+        padding: 50px 0 80px
+    +r(576)
+        padding: 30px 0 60px
+
+    &__title
+        h3
+            font-size: $h3-fs
+            text-align: center
+            text-transform: uppercase
+            color: #0F2E4E
+            +nExBold
+
+    &__tab__list
+        display: flex
+        margin: 35px 0
+        gap: 15px
+        flex-wrap: wrap
+        +r(992)
+            justify-content: center
+            align-items: center
+
+    &__tab__btn
+        font-size: $body-fs
+        line-height: 175%
+        display: flex
+        justify-content: center
+        align-items: center
+        letter-spacing: 0.004em
+        color: #20232C
+        background: rgba(255, 255, 255, 0.93)
+        border: 1px solid #B3B3B3
+        border-radius: 65px
+        transition: .5s
+        padding: 17px 35px
+        transition: .5s
+        +nSemBold
+        +r(576)
+            font-size: $caption-fs
+            padding: 12px 25px
+
+        &:hover
+            color: #EE5351
+            background: rgba(255, 255, 255, 0.93)
+            border: 1px solid #EE5351
+            box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+            border-radius: 65px
+
+        &.active
+            color: #EE5351
+            background: rgba(255, 255, 255, 0.93)
+            border: 1px solid #EE5351
+            box-shadow: 0px 20px 40px rgba(251, 72, 83, 0.15)
+            border-radius: 65px
+
+    &__cards
+        display: flex
+        justify-content: space-between
+        background: $w
+        box-shadow: 10px 50px 60px rgba(0, 0, 0, 0.1)
+        border-radius: 15px
+        padding: 45px 50px
+        will-change: transform
+        +r(992)
+            flex-direction: column
+            gap: 40px
+        +r(576)
+            gap: 20px
+            padding: 35px 40px
+            
+
+    &__left
+        flex-basis: 35%
+        max-width: 35%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 15px
+
+    &__right
+        flex-basis: 60%
+        max-width: 60%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+        p
+            font-size: $h5-fs
+            line-height: 175%
+            letter-spacing: 0.5px
+            color: #122541
+            +r(992)
+                font-size: $h6-fs
+            +r(576)
+                font-size: $body-fs
+
+.app-services
+    .forms-block-section
+        margin-bottom: 0
+
+    .main__decoration-line-bottom
+        width: 100%
+        left: 0
+        bottom: 0

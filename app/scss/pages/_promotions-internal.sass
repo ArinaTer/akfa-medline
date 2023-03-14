@@ -1,0 +1,67 @@
+.app-promotions-internal
+    .about-section__item__text
+        p
+            padding-bottom: 10px
+            line-height: 170%
+            font-size: $h6-fs
+            +r(1440)
+                font-size: $body-fs
+                padding-bottom: 0
+            +r(992)
+                padding: 0
+
+        ul
+            padding: 0
+
+        li
+            font-size: $h6-fs
+            letter-spacing: 0.1px
+            line-height: 170%
+            +r(1440)
+                font-size: $body-fs
+
+    .about-section__item
+        padding-bottom: 50px
+        +r(1440)
+            padding-bottom: 20px
+
+    .about-section__img
+        img
+            object-position: left
+
+    .about-section__item__list
+        padding-top: 60px
+        display: flex
+        flex-direction: column
+        gap: 30px
+        +r(1440)
+            padding-left: 0
+            padding-top: 40px
+            gap: 15px
+        +r(992)
+            padding-top: 10px
+        +r(576)
+            padding: 80px 0 20px
+        li
+            font-size: $h6-fs
+            line-height: 160%
+            color: #000000
+            display: flex
+            align-items: center
+            gap: 13px
+            +nMed
+            +r(1440)
+                font-size: $body-fs
+                gap: 10px
+            +r(576)
+                font-size: $caption-fs
+            &::before
+                content: url("../img/icons/check.svg")
+                height: 32px
+
+    .forms-block-section
+        margin-bottom: 0
+
+    .about-section__item__list
+        +r(576)
+            padding: 10px

@@ -1,0 +1,117 @@
+.about-section
+    position: relative
+
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-image: url(../img/decoration-2.png)
+        background-repeat: no-repeat
+        background-size: auto
+
+    &__list
+        padding-bottom: 80px
+        +r(992)
+            padding-bottom: 10px
+        +r(576)
+            padding-bottom: 10px
+
+    &__item
+        display: flex
+        gap: 50px
+        padding-bottom: 110px
+        +r(992)
+            flex-direction: column
+            padding-bottom: 50px
+        +r(576)
+            gap: 20px
+            padding-bottom: 20px
+
+        &__title
+            h3
+                +nBold
+                font-size: $h3-fs
+                color: #030314
+                position: relative
+                padding-bottom: 25px
+                +r(1440)
+                    font-size: $h4-fs
+                +r(1280)
+                    padding-bottom: 15px
+
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 65px
+                    height: 3px
+                    background-color: $red
+
+        &__text
+            p
+                font-size: 18px
+                letter-spacing: 0.1px
+                padding-top: 10px
+                margin-bottom: 0
+                line-height: 191%
+                +r(1280)
+                    padding-top: 15px
+                +r(576)
+                    font-size: $caption-fs
+                    padding-top: 10px
+
+    &__left
+        width: 100%
+        flex-basis: 45%
+        max-width: 45%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__right
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        flex-basis: 52%
+        max-width: 52%
+        +r(992)
+            flex-basis: 100%
+            max-width: 100%
+
+    &__bottom
+        .about-section__left
+            order: 2
+            +r(576)
+                order: 1
+        .about-section__right
+            order: 1
+            +r(576)
+                order: 2
+
+    &__img
+        background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%)
+        box-shadow: -60px 40px 65px rgba(44, 35, 99, 0.1)
+        border-radius: 30px
+        padding: 30px
+        position: relative
+        height: 100%
+        +r(576)
+            padding: 15px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 30px
+
+
+.app-about
+    .forms-block-section
+        margin-bottom: 0
+        
